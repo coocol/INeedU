@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+        <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+           
+          
+            <ImageButton
+			    android:id="@+id/pour_listen_bg_choose_page_back_button"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="选择默认头像"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>
+
+       
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+<!--  <GridView
+     android:id="@+id/gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:numColumns="3"
+    android:columnWidth="128dp"
+    android:horizontalSpacing="24dp"
+    android:verticalSpacing="24dp"/>  
+   -->
+ <RelativeLayout  android:layout_height="match_parent"
+     android:layout_width="match_parent">
+   
+<com.handmark.pulltorefresh.library.PullToRefreshGridView
+    android:id="@+id/pour_listen_bg_gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:horizontalSpacing="0dp"
+    android:listSelector="@null"
+    android:numColumns="2"
+    android:scrollbars="none"
+    android:stretchMode="columnWidth"
+    android:verticalSpacing="0dp" />
+ 
+ </RelativeLayout>  
+    
+   
+</LinearLayout>
+
+
+
+   <!--啦啦啦、这是标记啦  -->

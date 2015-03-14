@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="white">#FFFFFF</color><!--白色 -->
+<color name="eighty_white">#ccffffff</color><!-- 百分之80的白色 -->
+<color name="transparent">#00000000</color><!-- 透明 -->
+<color name="light_black">#19000000</color><!-- 百分之10的黑色透明 -->
+<color name="dark_black">#cc000000</color><!-- 百分之80的黑色透明 -->
+<color name="ten_black">#19000000</color><!-- 百分之10的黑色透明 -->
+<color name="eighty_black">#cc000000</color><!-- 百分之80的黑色透明 -->
+<color name="sixty_black">#99000000</color><!-- 百分之60的黑色透明 -->
+<color name="thirty_black">#4c000000</color><!-- 百分之20的黑色透明 -->
+<color name="twenty_black">#33000000</color><!-- 百分之20的黑色透明 -->
+<color name="five_black">#08000000</color><!-- 百分之5的黑色透明 -->
+<color name="green">#20d589</color><!-- 绿色 -->
+<color name="pink">#ed8aee</color><!-- 粉红 -->
+<color name="dark_blue">#006ffd</color><!-- 深蓝色 -->
+<color name="yellow">#ffff3b</color><!--黄色 -->
+ <color name="sc_transparent_background">#00111111</color>
+ <color name="black">#000000</color>
+ <color name="grey">#EEEEEE</color>
+ <color name="light_blue">#14cdff</color>
+ <color name="blue">#03b6f9</color>
+ <drawable name="blue">#03b6f9</drawable>
+ <drawable name="transparent">#00ffffff</drawable>
+  <drawable name="green">#20d589</drawable>
+</resources>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/five_black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="12dp"
+        android:scrollbars="none" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+             >
+			<RelativeLayout 
+			    android:id="@+id/takephoto"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/white_click_black">
+			    <ImageView 
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="6dp"
+			        android:background="@drawable/photo"/>
+			    <TextView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="我想拍"
+			        android:textColor="@color/eighty_black"
+			        android:textSize="13sp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="3dp"/>
+			</RelativeLayout>
+			<RelativeLayout 
+			    android:id="@+id/say"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/white_click_black">
+			    <ImageView 
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="6dp"
+			        android:background="@drawable/say"/>
+			    <TextView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="我想说"
+			        android:textColor="@color/eighty_black"
+			        android:textSize="13sp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="3dp"/>
+			</RelativeLayout>
+			<RelativeLayout 
+			    android:id="@+id/play"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/white_click_black">
+			    <ImageView 
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="6dp"
+			        android:background="@drawable/play"/>
+			    <TextView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="我想玩"
+			        android:textColor="@color/eighty_black"
+			        android:textSize="13sp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="3dp"/>
+			</RelativeLayout>
+			
+            
+
+
+ 
+        </LinearLayout>
+        
+        <LinearLayout 
+              	  android:id="@+id/ll_mood"
+                  android:layout_width="match_parent"
+                  android:layout_height="52dp"
+            	  android:background="@drawable/white_click_black"
+            	  android:layout_marginTop="24dp"
+            	  android:orientation="horizontal"
+                  >
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			    <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+				android:layout_centerInParent="true"
+                android:background="@drawable/say"
+               />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			   <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="此刻的心情"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="17sp" />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			  
+			</RelativeLayout>
+
+          </LinearLayout>
+      
+       
+        
+          <LinearLayout 
+              	  android:id="@+id/wish"
+                  android:layout_width="match_parent"
+                  android:layout_height="52dp"
+            	  android:background="@drawable/white_click_black"
+            	  android:layout_marginTop="24dp"
+            	  android:orientation="horizontal"
+                  >
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			    <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+				android:layout_centerInParent="true"
+                android:background="@drawable/star"
+               />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			   <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="女生星愿墙"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="17sp" />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			  
+			</RelativeLayout>
+
+          </LinearLayout>  
+          
+          <RelativeLayout 
+              android:id="@+id/molest"
+              android:layout_width="match_parent"
+              android:layout_height="52dp"
+              android:layout_marginTop="24dp"
+              android:background="@drawable/white_click_black">
+          <LinearLayout 
+              	  
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+            	  android:orientation="horizontal"
+                  >
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			    <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+				android:layout_centerInParent="true"
+                android:background="@drawable/daytime"
+               />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			   <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="伊伊反馈群"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="17sp" />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			  
+			</RelativeLayout>
+
+          </LinearLayout>
+          </RelativeLayout>
+  
+          
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+             >
+			<RelativeLayout 
+			    android:id="@+id/morning"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:layout_marginLeft="6dp"
+			    android:background="@drawable/white_click_black">
+			    <ImageView 
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="6dp"
+			        android:background="@drawable/morning"/>
+			    <TextView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="起床困难户"
+			        android:textColor="@color/eighty_black"
+			        android:textSize="13sp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="3dp"/>
+			</RelativeLayout>
+			<RelativeLayout 
+			    android:id="@+id/molest_old"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:layout_marginLeft="3dp"
+			    android:layout_marginRight="3dp"
+			    android:background="@drawable/white_click_black">
+			    <ImageView 
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="6dp"
+			        android:background="@drawable/daytime"/>
+			    <TextView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="调戏伊伊团队"
+			        android:textColor="@color/eighty_black"
+			        android:textSize="13sp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="3dp"/>
+			</RelativeLayout>
+			<RelativeLayout 
+			    android:id="@+id/night"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:layout_marginRight="6dp"
+			    android:background="@drawable/white_click_black">
+			    <ImageView 
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_marginTop="6dp"
+			        android:background="@drawable/night"/>
+			    <TextView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="深夜话疗"
+			        android:textColor="@color/eighty_black"
+			        android:textSize="13sp"
+			        android:layout_centerHorizontal="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="3dp"/>
+			</RelativeLayout>
+			
+            
+        </LinearLayout>
+        
+          <LinearLayout 
+              	  android:id="@+id/love"
+                  android:layout_width="match_parent"
+                  android:layout_height="52dp"
+            	  android:background="@drawable/white_click_black"
+            	  android:layout_marginTop="24dp"
+            	  android:orientation="horizontal"
+                  >
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			    <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+				android:layout_centerInParent="true"
+                android:background="@drawable/love_big"
+               />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			   <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="校园男女神"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="17sp" />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			  
+			</RelativeLayout>
+
+          </LinearLayout>
+          
+          <LinearLayout 
+              	  android:id="@+id/popularity"
+                  android:layout_width="match_parent"
+                  android:layout_height="52dp"
+            	  android:background="@drawable/white_click_black"
+            	  android:layout_marginTop="1dp"
+            	  android:orientation="horizontal"
+                  >
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			    <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+				android:layout_centerInParent="true"
+                android:background="@drawable/flower_big"
+               />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			   <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="校园明星榜"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="17sp" />
+			</RelativeLayout>
+            <RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1">
+			  
+			</RelativeLayout>
+
+          </LinearLayout>
+</LinearLayout>
+        
+</ScrollView>
+</LinearLayout>

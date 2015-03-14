@@ -1,0 +1,84 @@
+package com.eethan.ineedu.secondaryactivity;
+
+import u.aly.cu;
+
+import com.eethan.ineedu.CommonUse.SPHelper;
+import com.eethan.ineedu.fragment.MainFragment;
+import com.eethan.ineedu.primaryactivity.BaseActivity;
+import com.eethan.ineedu.primaryactivity.R;
+import com.eethan.ineedu.util.MyTimer;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+public class DeveloperActivity extends BaseActivity{
+
+	private ImageButton backButton;
+	RelativeLayout relativeLayout;
+	long curTime=0,waitTime=300;
+	int clicktime=0;
+	SPHelper spHelper=new SPHelper(DeveloperActivity.this);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setPageName("DeveloperActivity");
+		setContentView(R.layout.developer_page);
+		findView();
+	}
+	
+	private void findView() {
+		// TODO Auto-generated method stub
+		backButton = (ImageButton)findViewById(R.id.developer_imgbt_back);
+		backButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				DeveloperActivity.this.finish();
+			}
+		});
+		
+		relativeLayout=(RelativeLayout)findViewById(R.id.infinitemode);
+		relativeLayout.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				if((Boolean)spHelper.get(SPHelper.INFINITEMODE))
+					return;
+				
+				if(curTime==0)
+				{ 
+					curTime=System.currentTimeMillis();
+					clicktime++;
+					return;
+				}
+				if(clicktime==3)
+				{
+					Toast.makeText(getContext(), "infiniteMode", Toast.LENGTH_SHORT).show();
+					spHelper.put(SPHelper.INFINITEMODE, true);
+					MainFragment.popupRefresh=true;
+					return;
+				}
+				long timeNow=System.currentTimeMillis();
+				if(timeNow-curTime<waitTime)
+				{
+					clicktime++;
+					curTime=timeNow;
+				}
+				else{
+					clicktime=0;
+					curTime=0;
+				}
+				
+			}
+		});
+	}
+
+}

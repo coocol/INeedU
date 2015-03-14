@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/five_black"
+    android:orientation="vertical">
+  
+
+	<RelativeLayout android:layout_height="44dp"
+	    android:layout_width="match_parent"
+	    android:background="@color/blue"
+	    >
+
+
+            <ImageButton
+			    android:id="@+id/developer_imgbt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="伊伊团队"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>            
+</RelativeLayout>
+
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none" >
+
+  <LinearLayout android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical"
+	    android:paddingBottom="12dp">
+	
+     
+
+    
+
+
+    
+    
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="6dp"
+        android:layout_marginTop="12dp">
+            
+        
+            <TextView 
+                android:id="@+id/tv_text4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:text="Join Us"
+        		android:textColor="@color/blue" 
+                android:textSize="16sp"/>
+            <ImageView 
+                android:id="@+id/iv_line4"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/blue"
+                android:layout_below="@id/tv_text4"
+                android:layout_marginTop="6dp"/>
+     
+    		 <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="发送简历至:\n928834732@qq.com\n注明方向:\n技术开发、美工、策划、运营推广"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="16sp"
+                android:layout_below="@id/iv_line4"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"/>  
+            
+    </RelativeLayout>
+
+	</LinearLayout>  
+
+  </ScrollView>
+</LinearLayout>

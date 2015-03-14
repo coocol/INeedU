@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+	android:paddingLeft="24dp"
+    android:paddingRight="24dp" >
+    
+    <RelativeLayout
+        android:id="@+id/pour_listen_detail_rela"
+	    android:layout_width="50dp"
+	    android:layout_height="50dp"
+	    android:background="@drawable/circle_button_blue_selector">
+	    
+             <TextView
+		         android:id="@+id/pour_listen_detail_floor"
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:textColor="@color/white"
+		         android:textSize="13sp"
+		         android:layout_centerInParent="true" />
+    </RelativeLayout>
+    
+    
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="12dp"
+        android:textColor="@color/eighty_white"
+        android:textSize="12sp"
+        android:layout_toRightOf="@+id/pour_listen_detail_rela"/>
+    
+    <TextView
+        android:id="@+id/pour_listen_page_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+		android:layout_toRightOf="@id/tv_sex"
+		android:layout_marginLeft="6dp"
+        android:textColor="@color/eighty_white"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/pour_listen_detail_page_item_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="36dp"
+        android:layout_alignLeft="@+id/tv_sex"
+        android:layout_below="@+id/tv_sex"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="18dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="6dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/chat_worldbubble_left_60"
+		android:autoLink="web|email|map" />
+    
+</RelativeLayout>

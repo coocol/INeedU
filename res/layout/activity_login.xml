@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:text="伊伊"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+    <EditText
+        android:id="@+id/login_et_account"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="71dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center"
+        android:hint="邮箱/手机"
+        android:maxLines="1"
+        android:nextFocusDown="@+id/login_et_password"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp" >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/login_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_et_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:nextFocusDown="@+id/login_bt_login"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/login_bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_button_selector"
+        android:text="确定"
+        android:textColor="@color/eighty_black"
+		android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/quick_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_bt_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_button_selector"
+        android:text="QQ登陆"
+        android:textColor="#ffffff"
+		android:textSize="16sp"
+		android:visibility="gone"/>
+    
+    <TextView
+        android:id="@+id/login_tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_bt_login"
+        android:layout_below="@+id/login_bt_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:text="忘记密码?"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/login_tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/login_bt_login"
+        android:layout_alignTop="@+id/login_tv_forget_password"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+     
+  
+</RelativeLayout>
+</ScrollView>
+    
+</RelativeLayout>

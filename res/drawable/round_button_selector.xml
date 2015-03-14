@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >  
+    <item android:state_pressed="true" >  
+        <shape>  
+              <corners 
+		        android:topLeftRadius="15dp"   
+		        android:topRightRadius="15dp"    
+		        android:bottomRightRadius="15dp"   
+		        android:bottomLeftRadius="15dp"/>   
+              <solid android:color="@color/twenty_black"/> 
+               <!-- 描边 -->
+              
+        </shape>  
+    </item>  
+    <item android:state_checked="true" >  
+        <shape>  
+              <corners 
+		        android:topLeftRadius="15dp"   
+		        android:topRightRadius="15dp"    
+		        android:bottomRightRadius="15dp"   
+		        android:bottomLeftRadius="15dp"/>  
+              <solid android:color="@color/blue"/>  
+        </shape>  
+    </item>  
+    <item android:state_focused="true">  
+        <shape>  
+      
+    <corners 
+        android:topLeftRadius="15dp"   
+        android:topRightRadius="15dp"    
+        android:bottomRightRadius="15dp"   
+        android:bottomLeftRadius="15dp"/> 
+    <solid android:color="@color/twenty_black"/>  
+    </shape>  
+    </item>  
+    <item >  
+        <shape>  
+    <corners 
+        android:topLeftRadius="15dp"   
+        android:topRightRadius="15dp"    
+        android:bottomRightRadius="15dp"   
+        android:bottomLeftRadius="15dp"/>  
+    <solid android:color="@color/ten_black"/>  
+    </shape>  
+    </item>  
+  
+</selector>  

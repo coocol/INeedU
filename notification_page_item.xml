@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:descendantFocusability="blocksDescendants"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical" 
+     >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp" >
+        
+        <RelativeLayout
+            android:layout_width="84dp"
+            android:layout_height="94dp" >
+           
+           <ImageButton
+               android:id="@+id/home_page_user_headpic_button"
+               android:layout_height="60dp"
+               android:layout_marginLeft="13dp"
+               android:layout_width="60dp"
+               android:layout_marginTop="10dp"
+               android:scaleType="fitXY"
+               android:background="@null"
+               />
+           </RelativeLayout>
+           
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/home_page_verticalline1"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="#19000000" />
+
+            <RelativeLayout android:layout_height="20dp"
+                android:layout_width="match_parent" 
+                android:layout_marginTop="25dp">
+            
+            <ImageView
+                android:id="@+id/home_page_sex"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/sex_boy_press" />
+            
+       <TextView
+           android:id="@+id/home_page_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="38dp"
+           android:textColor="#333333"
+           android:textSize="15sp" />
+
+            </RelativeLayout>
+              </RelativeLayout>
+              </LinearLayout>
+              
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="114dp" 
+       android:id="@+id/linear_notification_comment">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:paddingRight="12dp" >
+
+           <ImageView
+               android:id="@+id/home_page_verticalline3"
+               android:layout_width="5dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="92dp"
+               android:background="#19000000" />
+
+           <ImageView
+               android:id="@+id/homepage_state_ask_icon"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_marginTop="29dp"
+               android:layout_marginLeft="84dp"
+               android:background="@drawable/common_ask_press" />
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="102dp"
+           android:layout_marginLeft="110dp"
+           android:background="@null" />
+       
+           
+           <TextView
+               android:id="@+id/home_page_content"
+               android:layout_width="match_parent"
+               android:layout_height="90dp"
+               android:layout_alignParentRight="true"
+               android:layout_marginLeft="122dp"
+               android:layout_marginRight="6dp"
+               android:layout_marginTop="6dp"
+               
+               android:textColor="#ffffff" />
+
+       </RelativeLayout>
+
+   </LinearLayout>
+   
+      <LinearLayout
+          android:id="@+id/linear_notification_comment2"
+          android:layout_width="match_parent"
+          android:layout_height="12dp" >
+          
+          	<ImageView 
+                
+                android:layout_height="match_parent"
+                android:layout_width="5dp"
+                android:layout_marginLeft="92dp"
+                android:background="#19000000"/>
+      </LinearLayout>
+      
+
+      
+      
+      <LinearLayout android:layout_height="25dp"
+          			android:layout_width="match_parent">
+       
+          <RelativeLayout android:layout_height="match_parent"
+          				  android:layout_width="match_parent"
+          				  android:paddingLeft="12dp"
+          				  android:paddingRight="12dp">
+		  
+		  <ImageView 
+                android:id="@+id/home_page_horizontalline1"
+                android:layout_height="match_parent"
+                android:layout_width="5dp"
+                android:layout_marginLeft="80dp"
+                android:background="#19000000"/>
+           
+		  <ImageView
+		      android:id="@+id/home_page_horizontalline2"
+		      android:layout_width="match_parent"
+		      android:layout_height="5dp"
+		      android:layout_centerVertical="true"
+		      android:background="#19000000" />		  
+		  
+		  		  
+		  </RelativeLayout>
+          
+      </LinearLayout>  
+      
+   <LinearLayout
+       android:id="@+id/linear_notification_comment3"
+       android:layout_width="match_parent"
+       android:layout_height="12dp" >
+     
+          <ImageView
+              android:layout_width="5dp"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="92dp"
+              android:background="#19000000" />
+
+ </LinearLayout>    
+</LinearLayout>
+
+   <!--这不是标记啊 = = -->
+

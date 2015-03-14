@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network
+END
+CustomerHttpClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network/CustomerHttpClient.java
+END
+NetCondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network/NetCondition.java
+END
+ServerCommunication.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network/ServerCommunication.java
+END
+SocketHttpRequester.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network/SocketHttpRequester.java
+END
+NetworkChangeReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network/NetworkChangeReceiver.java
+END
+PostException.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/inu1012he/!svn/ver/3/INeedU/src/com/eethan/ineedu/network/PostException.java
+END

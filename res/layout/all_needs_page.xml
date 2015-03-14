@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+    
+    <LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+	<RelativeLayout android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    >
+
+
+           
+            <ImageButton
+			    android:id="@+id/allneeds_imgbt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="所有见面"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            
+</RelativeLayout>
+</LinearLayout>   
+    
+    
+	<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+	    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="94dp"
+        android:background="@color/thirty_black" />
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/home_page_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/click_blue"
+        android:divider="@null" />
+
+ 
+         
+ </RelativeLayout>   
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/five_black">
+    
+  
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="44dp"
+         android:background="@color/blue" >
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:text="我想拍"
+             android:textColor="@color/white"
+             android:textSize="18sp" />
+
+		<ImageButton
+		    android:id="@+id/photonews_imgbt_back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+		
+		<ImageButton
+		    android:id="@+id/photonews_imgbt_take_photo"
+		    android:layout_width="44dp"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/take_photo" />
+
+     </RelativeLayout>
+
+    
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent">
+ 
+ 
+      <com.handmark.pulltorefresh.library.PullToRefreshListView
+       android:id="@+id/lv_takephotos"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:divider="@null"
+       android:listSelector="@drawable/click_blue"
+	   />
+      
+      
+</RelativeLayout>
+        
+</LinearLayout>

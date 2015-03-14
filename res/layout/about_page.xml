@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/five_black">
+    
+<LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent">
+	<RelativeLayout android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:background="@color/blue"
+	   >
+
+
+            <ImageButton
+			    android:id="@+id/about_imgbt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="关于伊伊"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>            
+</RelativeLayout>
+</LinearLayout>
+
+
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/white_click_black">
+            
+        
+            <TextView 
+                android:id="@+id/tv_text1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:text="联系我们"
+        		android:textColor="@color/blue" 
+                android:textSize="16sp"/>
+            <ImageView 
+                android:id="@+id/iv_line1"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/blue"
+                android:layout_below="@id/tv_text1"
+                android:layout_marginTop="6dp"/>
+     
+    		 <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="1641714141@qq.com"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="16sp"
+                android:layout_below="@id/iv_line1"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"/>  
+            
+    </RelativeLayout>
+    
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/white_click_black">
+            
+        
+            <TextView 
+                android:id="@+id/tv_text2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:text="伊伊招贤群"
+        		android:textColor="@color/blue" 
+                android:textSize="16sp"/>
+            <ImageView 
+                android:id="@+id/iv_line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/blue"
+                android:layout_below="@id/tv_text2"
+                android:layout_marginTop="6dp"/>
+     
+    		 <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="320088641"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="16sp"
+                android:layout_below="@id/iv_line2"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"/>  
+            
+    </RelativeLayout>
+    
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/white_click_black">
+            
+        
+            <TextView 
+                android:id="@+id/tv_text3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:text="伊伊交流群"
+        		android:textColor="@color/blue" 
+                android:textSize="16sp"/>
+            <ImageView 
+                android:id="@+id/iv_line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/blue"
+                android:layout_below="@id/tv_text3"
+                android:layout_marginTop="6dp"/>
+     
+    		 <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="226282785"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="16sp"
+                android:layout_below="@id/iv_line3"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"/>  
+            
+    </RelativeLayout>
+    
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/white_click_black">
+            
+        
+            <TextView 
+                android:id="@+id/tv_text4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:text="新浪微博/人人公共主页"
+        		android:textColor="@color/blue" 
+                android:textSize="16sp"/>
+            <ImageView 
+                android:id="@+id/iv_line4"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/blue"
+                android:layout_below="@id/tv_text4"
+                android:layout_marginTop="6dp"/>
+     
+    		 <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="予善伊伊"
+        		android:textColor="@color/eighty_black" 
+                android:textSize="16sp"
+                android:layout_below="@id/iv_line4"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"/>  
+            
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+
+   <!--啦啦啦、这是标记啦  -->

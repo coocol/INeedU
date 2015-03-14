@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue" >
+    
+    
+
+	<RelativeLayout 
+	    android:id="@+id/title_rela"
+	    android:layout_height="44dp"
+	    android:layout_width="match_parent">
+
+
+            <ImageButton
+			    android:id="@+id/checkupdate_imgbt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="检测更新"
+				  android:layout_centerInParent="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>   
+            	  
+</RelativeLayout>
+
+	<TextView
+	    android:id="@+id/logo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/title_rela"
+	    android:layout_centerHorizontal="true"
+	    android:textSize="30dp"
+	    android:textColor="#ffffff"
+	    android:layout_marginTop="64dp"
+	    android:text="伊伊" />
+
+	<TextView
+	    android:id="@+id/cheup_tv_current_version"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/logo"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="36dp"
+	    android:textColor="#ffffff"
+	    android:text="当前版本:1.0.0" />
+
+	<TextView
+	    android:id="@+id/cheup_tv_newest_version"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/cheup_tv_current_version"
+	    android:layout_centerHorizontal="true"
+	    android:textColor="#ffffff"
+	    android:layout_marginTop="36dp"
+	    android:text="最新版本:2.1.1" 
+	    android:visibility="gone"/>
+
+	<Button
+	    android:id="@+id/cheup_bt_update_now"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+	    android:background="@drawable/common_button_selector"
+	    android:layout_below="@+id/cheup_tv_newest_version"
+	    android:layout_centerHorizontal="true"
+	    android:textColor="@color/eighty_black"
+	    android:layout_marginTop="26dp"
+	    android:text="检测更新" />
+
+	<Button
+	    android:id="@+id/hand_update"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/cheup_bt_update_now"
+	    android:layout_marginLeft="42dp"
+	    android:layout_marginRight="42dp"
+	    android:layout_marginTop="20dp"
+	    android:background="@drawable/common_button_selector"
+	    android:text="手动更新"
+	    android:textColor="@color/eighty_black" />
+
+</RelativeLayout>
+
+   <!--啦啦啦、这是标记啦  -->

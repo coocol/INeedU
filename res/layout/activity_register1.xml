@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+     >
+     
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+     >
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:text="伊伊"
+        android:textColor="#ffffff"
+        android:textSize="32sp" />
+
+    <EditText
+        android:id="@+id/register1_et_tele"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="电话"
+        android:maxLength="11"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp" 
+        android:nextFocusDown="@+id/register1_et_email">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/register1_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register1_et_tele"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="邮箱"
+        android:maxLength="25"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp" 
+        android:nextFocusDown="@+id/register1_et_password"/>
+    
+    <EditText
+        android:id="@+id/register1_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register1_et_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp" 
+        android:nextFocusDown="@+id/register1_et_comfirm_password"/>
+    
+    <EditText
+        android:id="@+id/register1_et_comfirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register1_et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="确认密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp"
+        android:nextFocusDown="@+id/register1_bt_next" />
+
+    <Button
+        android:id="@+id/register1_bt_next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register1_et_comfirm_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_button_selector"
+        android:text="下一步"
+        android:textColor="@color/eighty_black"
+		android:textSize="16sp"/>
+
+       
+    <ImageButton
+		    android:id="@+id/register1_bt_back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+   
+</RelativeLayout>
+</ScrollView>     
+</RelativeLayout>

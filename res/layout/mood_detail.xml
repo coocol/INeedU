@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/five_black">
+    
+  
+     <RelativeLayout
+         android:id="@+id/title"
+         android:layout_width="match_parent"
+         android:layout_height="44dp" 
+         android:background="@color/blue">
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:text="心情详细"
+             android:textColor="@color/white"
+             android:textSize="18sp" />
+
+         
+		<ImageButton 
+         		android:id="@+id/photonews_imgbt_back"
+                android:layout_height="44dp"
+                android:layout_width="44dp"
+                android:background="@drawable/button_click_background_change"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"/>
+		
+		
+     </RelativeLayout>
+
+     <LinearLayout 
+         android:id="@+id/bottom"
+         android:layout_alignParentBottom="true"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+		<ImageView 
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/green"
+		    android:layout_weight="1"/>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="60dp"
+         android:orientation="horizontal"
+         android:background="@color/white">
+
+         <ImageButton
+             android:id="@+id/bt_praise"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_gravity="center_vertical"
+             android:background="@drawable/button_click_background_change"
+             android:src="@drawable/praise_big" 
+             android:scaleType="centerInside"
+             android:padding="6dp"/>
+         <ImageButton
+             android:id="@+id/bt_flower"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_gravity="center_vertical"
+             android:background="@drawable/button_click_background_change"
+             android:src="@drawable/flower" 
+             android:scaleType="centerInside"
+             android:padding="6dp"/>
+         <ImageButton
+             android:id="@+id/bt_comment"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_gravity="center_vertical"
+             android:background="@drawable/button_click_background_change"
+             android:src="@drawable/comment_big" 
+             android:scaleType="centerInside"
+             android:padding="6dp"/>
+		
+     </LinearLayout>
+     </LinearLayout>
+
+<ScrollView
+    android:id="@+id/photonews_details_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/bottom"
+    android:layout_below="@id/title"
+    android:background="@color/white"
+    android:scrollbars="none" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="74dp">
+
+    <ImageButton
+        android:id="@+id/head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:background="@null" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/head"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/head" >
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@null" />
+
+       <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/sex"
+                android:textColor="@color/blue"
+                android:textSize="15sp" />
+            
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/head"
+            android:layout_alignLeft="@+id/relativeLayout1"
+            android:textColor="@color/sixty_black"
+            android:textSize="15sp" />
+        <TextView
+	            android:id="@+id/time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignBottom="@id/tv_distance"
+				android:layout_marginLeft="3dp"
+				android:layout_toRightOf="@id/tv_distance"
+	            android:textColor="@color/sixty_black"
+	            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/at_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/time"
+            android:layout_toRightOf="@+id/time"
+            android:textColor="@color/green"
+            android:textSize="15sp" />
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+        <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:textColor="@color/eighty_black"
+        android:textSize="18sp"
+        android:padding="6dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"/>
+    <ImageView
+        android:layout_below="@id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/blue" />
+    
+    
+</RelativeLayout>
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="6dp"
+    >
+    
+    <com.eethan.ineedu.mycontrol.ScrollListView
+   	   android:id="@+id/lv_comment"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:listSelector="@drawable/click_blue"
+       android:divider="@null"/>
+    
+</RelativeLayout>
+</LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

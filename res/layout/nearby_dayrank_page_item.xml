@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    >
+    
+
+		
+     <RelativeLayout android:layout_width="match_parent"
+					 android:layout_height="match_parent"
+					 android:layout_marginLeft="12dp"
+					 android:layout_marginRight="12dp"
+        				 >
+        
+       
+    
+	   	 <ImageButton    
+	   	            android:id="@+id/nearby_page_headpic_button"
+           		    android:layout_height="60dp"
+       				android:layout_width="60dp"
+       				android:layout_centerVertical="true"
+       				android:scaleType="fitXY"
+       				android:background="@null"/>
+
+         
+
+       	    
+ <RelativeLayout 
+		 	    android:id="@+id/re_userinfo"
+		 	    android:layout_width="match_parent"
+		 	    android:layout_height="wrap_content"
+		 	    android:layout_marginRight="12dp"
+		 	    android:layout_marginLeft="12dp"
+		 	    android:layout_marginTop="9dp"
+		 	    android:layout_toRightOf="@id/nearby_page_headpic_button"
+		 	    >
+		 	    
+		 	    <ImageView 
+		 	        android:id="@+id/iv_sex"
+		 	        android:layout_width="20dp"
+		 	        android:layout_height="20dp"
+		 	        android:layout_centerVertical="true"
+		 	        android:background="@null"/>
+		 	    
+		 	    <TextView   android:id="@+id/nearby_page_name"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@id/iv_sex"
+						android:layout_marginLeft="6dp"
+						android:textSize="16sp"
+						android:layout_centerVertical="true"
+						android:textColor="@color/blue"
+						/>
+		 	</RelativeLayout>
+
+
+       	    <TextView
+       	        android:id="@+id/nearby_page_detail"
+       	        android:layout_width="wrap_content"
+       	        android:layout_height="wrap_content"
+       	        android:layout_alignBottom="@+id/nearby_page_headpic_button"
+       	        android:layout_marginBottom="3dp"
+       	        android:layout_alignLeft="@+id/re_userinfo"
+       	        android:textColor="@color/sixty_black"
+       	        android:textSize="12sp" />
+       	    
+       	    <ImageView 
+       	        android:id="@+id/neadayrank_iv_loveicon"
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:background="@drawable/love"
+               />
+       	    
+		  <TextView
+		      android:id="@+id/nearby_page_love_addnum"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_centerVertical="true"
+		      android:layout_marginRight="6dp"
+		      android:layout_toLeftOf="@+id/neadayrank_iv_loveicon"
+		      android:textColor="@color/green"
+		      android:textSize="20sp" />
+		  
+		  <ImageView 
+			    android:layout_width="match_parent"
+			    android:layout_height="0.1dp"
+			    android:background="@color/thirty_black"
+			    android:layout_alignParentBottom="true"/>
+
+       	</RelativeLayout>
+       
+		</LinearLayout>
+
+
+

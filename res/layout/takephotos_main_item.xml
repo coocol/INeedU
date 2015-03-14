@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="6dp"
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp" >
+
+        <ImageButton
+            android:id="@+id/head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/head"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/head" >
+
+            <ImageView
+                android:id="@+id/sex"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sex_girl_press" />
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/sex"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                android:text="name and academy" />
+            
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/head"
+            android:layout_alignLeft="@+id/relativeLayout1"
+            android:textColor="@color/sixty_black"
+            android:textSize="15sp" 
+            android:text="distance"/>
+        
+        <TextView
+	            android:id="@+id/time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:layout_alignBottom="@+id/tv_distance"
+                android:layout_toRightOf="@+id/tv_distance"
+                android:layout_marginLeft="3dp"
+	            android:textColor="@color/sixty_black"
+	            android:textSize="15sp" 
+	            android:text="time"/>
+
+        <TextView
+            android:id="@+id/at_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/time"
+            android:layout_toRightOf="@+id/time"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/green"
+            android:text="/@xx"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/gray_background" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:textColor="@color/eighty_black"
+        android:textSize="16sp"
+        android:layout_below="@id/photo"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"/>
+    
+    
+</RelativeLayout>
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+     <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/thirty_black"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+     
+    <LinearLayout 
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:orientation="horizontal">
+        
+        <RelativeLayout 
+            android:id="@+id/praise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_click_background_change">
+            <ImageView 
+                android:id="@+id/img1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/praise"/>
+
+            <TextView
+                android:id="@+id/likeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/img1"
+                android:textColor="@color/sixty_black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        <RelativeLayout 
+            android:id="@+id/transmit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_click_background_change">
+            <ImageView 
+                android:id="@+id/img2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/transmit"/>
+
+            <TextView
+                android:id="@+id/transmitNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/img2"
+                android:textColor="@color/sixty_black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        <RelativeLayout 
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_click_background_change">
+            <ImageView 
+                android:id="@+id/img3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/comment"/>
+
+            <TextView
+                android:id="@+id/commentNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/img3"
+                android:textColor="@color/sixty_black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+</RelativeLayout>
+
+</LinearLayout>
+</LinearLayout>

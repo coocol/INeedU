@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="276dp"
+    android:layout_height="114dp"
+    android:background="@drawable/five_corner_blue"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+ 
+    <TextView 
+        android:id="@+id/content"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="17sp"
+        android:textColor="@color/white"/>
+    
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/eighty_white"
+		android:layout_margin="12dp"/>
+    
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp">
+        
+        
+        
+        <Button 
+            android:id="@+id/bt_first"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_button_selector"/>
+        
+        <Button 
+            android:id="@+id/bt_second"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white" 
+            android:gravity="center"
+            android:textSize="17dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/round_button_selector"/>
+         <Button 
+            android:id="@+id/bt_third"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white" 
+            android:gravity="center"
+            android:textSize="17dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_button_selector"/>
+
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" 
+    android:orientation="vertical">
+    
+
+<LinearLayout android:id="@+id/title"
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+       	    
+            
+            <ImageButton
+		    android:id="@+id/imgbt_back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="我想玩编辑"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="@color/white"
+            	  android:textSize="18sp"/>
+			<Button
+            android:id="@+id/bt_finish"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_click_background_change"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+        
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp" >
+
+    <TextView
+        android:id="@+id/tv_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="活动主题:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_theme"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/eighty_black"
+        android:hint="请输入活动主题"
+        android:textColorHint="@color/thirty_black"
+        android:maxLength="20"
+        android:background="@drawable/five_corner_ten_black">
+
+        <requestFocus />
+    </EditText>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp" >
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="内容:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="69dp"
+        android:gravity="top"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/eighty_black"
+        android:hint="请输入活动详细内容"
+        android:textColorHint="@color/thirty_black"
+        android:maxLength="100"
+        android:background="@drawable/five_corner_ten_black">
+
+    </EditText>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp" >
+
+    <TextView
+        android:id="@+id/tv_requirement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="要求:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_requirement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_below="@id/tv_requirement"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/eighty_black"
+        android:hint="请输入活动要求(人数、男女生等)"
+        android:textColorHint="@color/thirty_black"
+        android:maxLength="50"
+        android:background="@drawable/five_corner_ten_black">
+
+    </EditText>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp" >
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="时间:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/eighty_black"
+        android:hint="请输入活动时间(具体时间、持续时间)"
+        android:textColorHint="@color/thirty_black"
+        android:maxLength="50"
+        android:background="@drawable/five_corner_ten_black">
+
+    </EditText>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp" >
+
+    <TextView
+        android:id="@+id/tv_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="地点:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_below="@id/tv_place"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/eighty_black"
+        android:hint="请输入活动地点"
+        android:textColorHint="@color/thirty_black"
+        android:maxLength="20"
+        android:background="@drawable/five_corner_ten_black">
+
+    </EditText>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp" >
+
+    <TextView
+        android:id="@+id/tv_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="报名截止时间:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_deadline"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" >
+        <Button 
+            android:id="@+id/bt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="选择日期"
+            android:textColor="@color/eighty_black"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/five_black_click_selector"/>
+        <Button 
+            android:id="@+id/bt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="选择时间"
+            android:textColor="@color/eighty_black"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/five_black_click_selector"/>
+    </LinearLayout>
+    
+</RelativeLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

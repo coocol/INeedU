@@ -1,0 +1,51 @@
+package com.eethan.ineedu.model;
+
+import com.lidroid.xutils.db.annotation.Id;
+
+public class PourListenActivityModel {
+	@Id
+	private int _id=-1;
+	private int id;//pourlistenId
+	private int ownerId;//发布者id
+	private String imageUrl;
+	private String content;
+	private int numOfComment;
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public int getNumOfComment() {
+		return numOfComment;
+	}
+	public void setNumOfComment(int numOfComment) {
+		this.numOfComment = numOfComment;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int get_Id() {
+		return _id;
+	}
+	public void set_Id(int id) {
+		this._id = id;
+	}
+	public int getOwnerId() {
+		return ownerId;
+	}
+	public void setOwnerId(int ownerId) {
+		this.ownerId = ownerId;
+	}
+	
+}

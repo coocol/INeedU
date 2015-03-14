@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+     >
+     
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+     >
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="124dp"
+        android:text="伊伊"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+    <EditText
+        android:id="@+id/register3_et_university"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="71dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="学校"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/register3_et_academy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register3_et_university"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="学院"
+        android:maxLength="20"
+        android:maxLines="1"
+       android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp"   
+    android:singleLine="true"/>
+    
+    <EditText
+        android:id="@+id/register3_et_grade"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register3_et_academy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_round_input"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="年级"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:textColor="@color/eighty_black"
+        android:textColorHint="@color/twenty_black"
+        android:textSize="16sp"   
+    android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/register3_bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register3_et_grade"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_button_selector"
+        android:text="注册"
+        android:textColor="@color/eighty_black"
+		android:textSize="16sp"/>
+    
+    <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register3_bt_register"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:textColor="@color/sixty_black"
+                android:text="*非真实信息将永久封号*"/>
+
+    <ImageButton
+		    android:id="@+id/register3_bt_back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+   
+</RelativeLayout>
+</ScrollView>     
+</RelativeLayout>

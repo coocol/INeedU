@@ -1,0 +1,104 @@
+package com.eethan.ineedu.network;
+
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+
+import javax.crypto.IllegalBlockSizeException;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import android.content.Context;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import com.eethan.ineedu.constant.Constant;
+import com.eethan.ineedu.encrypt.RsaKey;
+import com.eethan.ineedu.jackson.JacksonUtil;
+import com.eethan.ineedu.mycontrol.MyToast;
+//服务器通信类
+/*
+ * 输入服务器需要的Object
+ * 返回请求数据
+ */
+public class ServerCommunication{
+		//默认加密
+			public static String request(Object DataWhatServerNeed,String URL) throws PostException
+			{
+				String jsonSend = JacksonUtil.json().fromObjectToJson(DataWhatServerNeed);//json   这可是明文
+				Log.i("JSON","JsonSend:"+jsonSend);
+				try {
+					jsonSend=RsaKey.Encrypt(jsonSend);//将发送的数据加密
+					jsonSend="EncryptByRSA://"+jsonSend;//标识头标识此为加密信息，服务器用于辨别新老版本
+				}  catch (IllegalBlockSizeException e) {
+					// TODO: handle exception
+				} catch (InvalidKeyException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				
+				NameValuePair jsonSendNameValuePair= new BasicNameValuePair("data", jsonSend);
+				String response = CustomerHttpClient.post(URL, jsonSendNameValuePair);
+				Log.i("JSON","获得的数据:"+response);
+				if(ExceptionCheck(response))
+					throw new PostException(response);
+				//将获得的数据解密
+				try {
+					response=RsaKey.Decrypt(response);
+					Log.i("JSON","解密后:"+response);
+				} catch (IllegalBlockSizeException e) {
+					// TODO: handle exception
+				} catch (InvalidKeyException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return response;
+			}
+			//不加密方式
+			public static String requestWithoutEncrypt(Object DataWhatServerNeed,String URL) throws PostException
+			{
+				String jsonSend = JacksonUtil.json().fromObjectToJson(DataWhatServerNeed);//json   这可是明文
+				Log.i("JSON","JsonSend:"+jsonSend);
+				
+				NameValuePair jsonSendNameValuePair= new BasicNameValuePair("data", jsonSend);
+				String response = CustomerHttpClient.post(URL, jsonSendNameValuePair);
+				Log.i("JSON","获得的数据:"+response);
+				if(ExceptionCheck(response))
+					throw new PostException(response);
+				
+				return response;
+			}
+			public static boolean checkResult(Context context,Object result)
+			{
+				if(ExceptionCheck(result))
+				{
+					MyToast.showToast(context, (String)result);
+					return false;
+				}
+				
+				return true;
+			}
+			private static boolean ExceptionCheck(Object str)
+			{
+				if(str!=null){
+					if(str.equals(Constant.HttpHostConnectException)
+							||str.equals(Constant.ConnectTimeoutException)
+							||str.equals(Constant.SocketTimeoutException)
+							||str.equals(Constant.ConnectException))
+						return true;
+					else {
+						return false;
+					}
+				}
+				return false;
+			}
+}

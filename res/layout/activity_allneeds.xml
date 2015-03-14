@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    
+   <LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+	<RelativeLayout android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    >
+
+        
+            <ImageButton
+			    android:id="@+id/allneeds_bt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="All Needs"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>      
+            	  
+
+            
+</RelativeLayout>
+</LinearLayout> 
+
+    
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/allneeds_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/click_blue"
+        android:divider="@null" />
+
+ 
+         
+ 	</LinearLayout>   
+    
+    
+
+
+</LinearLayout>

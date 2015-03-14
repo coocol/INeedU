@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+	>
+    
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingTop="6dp"
+		android:paddingBottom="6dp">
+        
+        
+  
+    
+<ImageButton   
+     android:id="@+id/ib_head"
+
+	android:layout_marginLeft="12dp"
+	android:layout_height="50dp"
+	android:layout_width="50dp"
+	android:scaleType="fitXY"
+	android:background="@null"/>
+
+<TextView android:id="@+id/tv_nickname"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_alignTop="@+id/ib_head"
+    android:layout_toRightOf="@+id/ib_head"
+    android:layout_marginLeft="12dp"
+    android:textColor="@color/blue"
+    android:textSize="14sp"/>
+
+<TextView android:id="@+id/tv_time"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_alignTop="@+id/tv_nickname"
+    android:layout_toRightOf="@+id/tv_nickname"
+    android:layout_marginLeft="12dp"
+    android:textColor="@color/sixty_black"
+    android:textSize="14sp"/>
+
+<TextView android:id="@+id/tv_content"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:minHeight="36dp"
+    android:layout_below="@+id/tv_nickname"
+    android:layout_alignLeft="@+id/tv_nickname"
+    android:layout_marginTop="6dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/chat_worldbubble_left_60"
+    android:paddingLeft="18dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:textColor="@color/eighty_black"
+    android:textSize="16sp"
+	android:autoLink="web|email|map"/>
+
+
+    </RelativeLayout>
+    
+
+</LinearLayout>

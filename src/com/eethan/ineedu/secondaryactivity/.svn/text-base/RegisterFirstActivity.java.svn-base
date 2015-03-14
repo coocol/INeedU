@@ -1,0 +1,199 @@
+package com.eethan.ineedu.secondaryactivity;
+
+import com.eethan.ineedu.constant.Constant;
+import com.eethan.ineedu.constant.URLConstant;
+import com.eethan.ineedu.databasebeans.User;
+import com.eethan.ineedu.jackson.JacksonUtil;
+import com.eethan.ineedu.mycontrol.MyToast;
+import com.eethan.ineedu.network.CustomerHttpClient;
+import com.eethan.ineedu.network.PostException;
+import com.eethan.ineedu.network.ServerCommunication;
+import com.eethan.ineedu.primaryactivity.BaseActivity;
+import com.eethan.ineedu.primaryactivity.R;
+import com.eethan.ineedu.util.InfoCheckUtil;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Html;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+
+public class RegisterFirstActivity extends BaseActivity{
+
+	private Button nextButton;
+	private ImageButton backButton;
+	private EditText email;
+	private EditText phone;
+	private EditText pwd;
+	private EditText pwd_again;
+	
+	private String phoneString;//以1开头的11位数字
+	private String pwdString;//不能超16位
+	private String pwd_againString;
+	private String emailString;//必须包含一个@和一个.com
+	private String result;
+	
+	private View focusView = null;
+	
+	
+	@SuppressLint("HandlerLeak")
+	private Handler mHandler = new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			// TODO Auto-generated method stub
+			if(msg.what==Constant.CONNECT_ERROR)
+			{
+				MyToast.showToast(getContext(), "服务器连接失败!");
+				return;
+			}
+			if(result.equals("emailRepetition")){
+				email.setError(Html.fromHtml("<font color=#E10979>邮箱已被使用</font>"));
+	    		focusView = email;
+	    		focusView.requestFocus();
+				return;
+			}
+			else if(result.equals("phoneRepetition")){
+				phone.setError(Html.fromHtml("<font color=#E10979>号码已被使用</font>"));
+				focusView = phone;
+				focusView.requestFocus();
+				return;
+			}
+			else if(result.equals("checkPass")){
+				Intent intent = new Intent(RegisterFirstActivity.this,RegisterSecondActivity.class);
+				//Intent传递参数
+				intent.putExtra("phoneString", phoneString);
+				intent.putExtra("pwdString", pwdString);
+				intent.putExtra("emailString", emailString);
+				
+				startActivity(intent);
+			}
+		}
+	};
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_register1);
+		
+		phone = (EditText) findViewById(R.id.register1_et_tele);
+		pwd = (EditText) findViewById(R.id.register1_et_password);
+		pwd_again = (EditText) findViewById(R.id.register1_et_comfirm_password);
+		email = (EditText) findViewById(R.id.register1_et_email);
+		
+		findView();
+	}
+	
+	private void findView() {
+		// TODO Auto-generated method stub
+    	
+		backButton = (ImageButton)findViewById(R.id.register1_bt_back);
+		nextButton = (Button)findViewById(R.id.register1_bt_next);
+		
+		backButton.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				RegisterFirstActivity.this.finish();
+			}
+			
+		});
+		
+		nextButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				
+				if(this.checkInfo()) {
+					new Thread(new Runnable() {
+						
+						@Override
+						public void run() {
+							// TODO Auto-generated method stub
+							try {
+								
+								User checkRigisteruser=new User();
+								
+								checkRigisteruser.setTele(phoneString);
+								checkRigisteruser.setEmail(emailString);
+								
+								
+								String checkresult =ServerCommunication.request(checkRigisteruser, URLConstant.CHECK_RIGISTER_URL);
+								
+								result = JacksonUtil.json().fromJsonToObject(checkresult, String.class);
+								
+								Message msg = mHandler.obtainMessage();
+								msg.obj = checkresult;
+								msg.sendToTarget();
+							} catch (PostException e) {
+								// TODO: handle exception
+								Message msg = mHandler.obtainMessage();
+								msg.what=Constant.CONNECT_ERROR;
+								msg.sendToTarget();
+								return;
+							}catch (Exception e) {
+								// TODO: handle exception
+							}
+							
+						}
+					}).start();
+					
+					
+				}
+				if(!this.checkInfo()) {
+		    		focusView.requestFocus();
+		    		return;
+		    	}
+			}
+			/**
+		     * 如果所有的信息填写正确,返回true,否则false
+		     * @return
+		     */
+			private boolean checkInfo() {
+				phoneString = phone.getText().toString().trim();
+		    	pwdString = pwd.getText().toString().trim();//不能超16位
+		    	pwd_againString = pwd_again.getText().toString().trim();
+		    	emailString = email.getText().toString().trim();//必须包含一个@和一个.com
+		    	
+		    	
+		    	if(!InfoCheckUtil.isPhoneNum(phoneString)) {
+					phone.setError(Html.fromHtml("<font color=#E10979>请输入正确的手机号码</font>"));
+					focusView = phone;
+					return false;
+				}
+		    	if(!InfoCheckUtil.isEmail(emailString)){
+		    		email.setError(Html.fromHtml("<font color=#E10979>请输入正确的邮箱</font>"));
+		    		focusView = email;
+					return false;
+		    	}
+		    	if(pwdString.isEmpty()) {
+					pwd.setError(Html.fromHtml("<font color=#E10979>请输入密码</font>"));
+					focusView = pwd;
+					return false;
+				}
+		    	
+		    	if(pwdString.length()>16) {
+					pwd.setError(Html.fromHtml("<font color=#E10979>密码长度不超过16位</font>"));
+					focusView = pwd;
+					return false;
+				}
+				
+				if(!pwdString.equals(pwd_againString)) {
+					pwd_again.setError(Html.fromHtml("<font color=#E10979>两次输入的密码不同</font>"));
+					focusView = pwd_again;
+					return false;
+				}
+		    	return true;
+			}
+		});
+	}
+
+}

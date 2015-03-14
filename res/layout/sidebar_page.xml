@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+     xmlns:android="http://schemas.android.com/apk/res/android">
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         
+         android:scrollbars="none" >
+
+  <LinearLayout android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:orientation="vertical">  
+    
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+     
+         <RelativeLayout android:layout_width="match_parent"
+						 android:layout_height="wrap_content"
+             >
+
+    <ImageButton
+        android:id="@+id/sidebar_page_headpic_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/logo" />
+         
+         </RelativeLayout>
+     </LinearLayout>
+     
+     <LinearLayout       
+         		  android:layout_width="match_parent"
+				  android:layout_height="44dp"
+             >
+         <RelativeLayout android:layout_width="match_parent"
+						 android:layout_height="match_parent"
+             >
+
+             <TextView
+                 android:id="@+id/sidebar_page_userName"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:textColor="@color/blue"
+                 android:textSize="18sp" />
+             
+         </RelativeLayout>
+     </LinearLayout>
+     
+      <ListView
+          android:id="@+id/sidebar_page_listview"
+          android:layout_width="match_parent"
+          android:layout_height="295dp"
+          android:choiceMode="singleChoice"
+          android:listSelector="@color/transparent"
+          android:divider="@null"  />
+
+     <LinearLayout android:layout_width="match_parent"
+				   android:layout_height="match_parent"
+				   android:layout_marginTop="12dp"
+         >
+         <RelativeLayout android:layout_width="match_parent"
+						 android:layout_height="match_parent"
+						 android:layout_marginBottom="24dp"
+             >
+
+<ImageButton
+    android:id="@+id/sidebar_page_setting_button"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginLeft="24dp"
+    android:background="@drawable/set_selector" />
+    
+<ImageButton
+    android:id="@+id/sidebar_page_notice_button"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="24dp"
+    android:background="@drawable/notice_selector" />
+
+         </RelativeLayout>
+         
+     </LinearLayout>
+  </LinearLayout>     
+</ScrollView>     
+
+</LinearLayout>
+
+   <!--这不是标记啊 = = -->

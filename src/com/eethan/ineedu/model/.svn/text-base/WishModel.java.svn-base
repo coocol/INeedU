@@ -1,0 +1,26 @@
+package com.eethan.ineedu.model;
+
+import org.jivesoftware.smackx.workgroup.packet.UserID;
+import org.xbill.DNS.tests.primary;
+
+import com.eethan.ineedu.databasebeans.UserInfo;
+import com.eethan.ineedu.databasebeans.Wish;
+
+public class WishModel {
+	
+	private Wish wish;
+	public Wish getWish() {
+		return wish;
+	}
+	public void setWish(Wish wish) {
+		this.wish = wish;
+	}
+	public UserInfo getOwnerInfo() {
+		return ownerInfo;
+	}
+	public void setOwnerInfo(UserInfo ownerInfo) {
+		this.ownerInfo = ownerInfo;
+	}
+	private UserInfo ownerInfo;
+
+}

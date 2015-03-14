@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/five_black" >
+    <LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+	<RelativeLayout android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    >
+
+
+           
+            <ImageButton
+			    android:id="@+id/pour_listen_issue_page_back_button"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="心情详细"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/pour_listen_detail_page_comment_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="评论"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_click_background_change"/>
+            
+</RelativeLayout>
+</LinearLayout>   
+
+
+    
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+	
+        <FrameLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+             <ImageView
+                android:id="@+id/pour_listen_detail_page_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />  
+                
+             <ScrollView
+			    android:id="@+id/pour_listen_detail_scrollview"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:scrollbars="none" >
+			    
+                 <LinearLayout android:layout_height="match_parent"
+        			android:layout_width="wrap_content"
+        			android:orientation="vertical">
+        			
+                     <RelativeLayout 
+	         android:layout_height="32dp"
+	         android:layout_width="match_parent"
+	         >
+	         
+		        <ImageView android:layout_height="match_parent"
+		            android:layout_width="match_parent"
+		            android:background="@color/ten_black"/>
+			        
+		        <ImageView 
+		            android:id="@+id/iv_sex"
+		            android:layout_height="20dp"
+		            android:layout_width="20dp"
+		            android:layout_marginLeft="24dp"
+		            android:layout_centerVertical="true"
+		            android:background="@null"/>
+		        
+		        
+		        <TextView android:id="@+id/tv_distance"
+		                  android:layout_height="wrap_content"
+		           		  android:layout_width="wrap_content"
+		           		  android:textSize="15sp"
+		           		  android:layout_toRightOf="@id/iv_sex"
+		           		  android:layout_marginLeft="6dp"
+		           		  android:layout_centerVertical="true"
+		           		  android:textColor="@color/white"/>
+		        
+		         
+		        <TextView android:id="@+id/tv_time"
+		                  android:layout_height="wrap_content"
+		           		  android:layout_width="wrap_content"
+		           		  android:textSize="15sp"
+		           		  android:layout_toRightOf="@id/tv_distance"
+		           		  android:layout_marginLeft="6dp"
+		           		  android:layout_centerVertical="true"
+		           		  android:textColor="@color/white"/>
+		        
+		         <TextView
+			                android:id="@+id/pour_listen_detail_page_commentnum"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_alignParentRight="true"
+			                android:layout_marginRight="24dp"
+			                android:layout_centerVertical="true"
+			                android:textColor="@color/white"
+			                android:textSize="16sp" />
+		        
+		        <ImageView
+			                android:layout_width="20dp"
+			                android:layout_height="20dp"
+			                android:layout_toLeftOf="@id/pour_listen_detail_page_commentnum"
+			                android:layout_marginRight="6dp"
+			                android:layout_centerVertical="true"
+			                android:background="@drawable/comment" />
+			
+			           
+              
+         </RelativeLayout>
+                 
+		        
+				    <RelativeLayout
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content" >
+			
+				        <TextView
+				            android:id="@+id/pour_listen_detail_page_text"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:layout_marginLeft="24dp"
+				            android:layout_marginRight="24dp"
+				            android:paddingTop="12dp"
+				            android:gravity="start|center_vertical"
+				            android:minHeight="168dp"
+				            android:paddingBottom="12dp"
+				            android:textColor="#ffffff"
+				            android:textSize="16sp" 
+		   					 android:autoLink="web|email|map"/>
+				        
+			            
+			
+			
+			
+				
+			        </RelativeLayout>
+			        
+			<RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            >
+
+            <com.eethan.ineedu.mycontrol.ScrollListView
+                android:id="@+id/pour_listen_detail_page_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:layout_marginTop="24dp"
+                 android:listSelector="@drawable/click_blue"
+                />
+
+            
+        </RelativeLayout>
+        
+		</LinearLayout>
+
+    
+       </ScrollView>
+                
+             
+            
+        </FrameLayout>
+	
+    </LinearLayout>
+
+
+</LinearLayout>

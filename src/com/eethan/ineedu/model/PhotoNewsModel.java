@@ -1,0 +1,51 @@
+package com.eethan.ineedu.model;
+
+import android.R.integer;
+
+import com.eethan.ineedu.databasebeans.TakePhotos;
+import com.eethan.ineedu.databasebeans.UserDetailInfo;
+import com.eethan.ineedu.databasebeans.UserInfo;
+
+
+public class PhotoNewsModel {
+	
+	private TakePhotos takePhotos;
+	private UserDetailInfo ownerDetailInfo;
+	public UserDetailInfo getOwnerDetailInfo() {
+		return ownerDetailInfo;
+	}
+	public void setOwnerDetailInfo(UserDetailInfo ownerDetailInfo) {
+		this.ownerDetailInfo = ownerDetailInfo;
+	}
+	private UserInfo ownerInfo;
+	private UserInfo atInfo;
+	private int lastNum;
+	
+	public int getLastNum() {
+		return lastNum;
+	}
+	public void setLastNum(int lastNum) {
+		this.lastNum = lastNum;
+	}
+	public TakePhotos getTakePhotos() {
+		return takePhotos;
+	}
+	public void setTakePhotos(TakePhotos takePhotos) {
+		this.takePhotos = takePhotos;
+	}
+	public UserInfo getOwnerInfo() {
+		return ownerInfo;
+	}
+	public void setOwnerInfo(UserInfo ownerInfo) {
+		this.ownerInfo = ownerInfo;
+	}
+	public UserInfo getAtInfo() {
+		return atInfo;
+	}
+	public void setAtInfo(UserInfo atInfo) {
+		this.atInfo = atInfo;
+	}
+	
+	
+
+}

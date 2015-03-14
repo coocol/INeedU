@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eethan.ineedu.primaryactivity"
+    android:versionCode="18"
+    android:versionName="1.4.4" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </permission>
+	  <uses-permission android:name="android.permission.GET_TASKS"></uses-permission>"
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.eethan.ineedu.util.CustomApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="540a7cc8fd98c5f5cc019510" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 友盟 -->
+
+
+        <!-- 广播 -->
+        <receiver
+            android:name="com.eethan.ineedu.network.NetworkChangeReceiver"
+            android:label="NetworkConnection" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.IssueNeedActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.AllNeedsActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.ContactActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.LoveRankActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.NeedDetailActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PersonInformationActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PopularityRankActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PourListenActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PourListenDetailActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.IssuePourListenActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.IssuePourListenCommentActivity" >
+        </activity>
+         <activity android:name="com.eethan.ineedu.primaryactivity.MoodActivity" >
+        </activity>
+          <activity android:name="com.eethan.ineedu.secondaryactivity.MoodDetailActivity">
+        </activity>
+          <activity android:name="com.eethan.ineedu.primaryactivity.IssueMoodActivity">
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.MyInformationActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.NotificationActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PourListenBackgroundActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.SettingsActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.ChatActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.WakeUpActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.WakeUpRequireActivity" >
+        </activity>
+         <activity android:name="com.eethan.ineedu.secondaryactivity.UploadMyPhotoActivity">
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PlaysDetailsActivity">
+        </activity>
+         <activity android:name="com.eethan.ineedu.secondaryactivity.WishJoinActivity">
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.MolestActivity">
+        </activity>
+        <activity
+            android:name="com.eethan.ineedu.secondaryactivity.WelcomeActivity"
+            android:label="@string/app_name" >
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.LoginActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.RegisterFirstActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.RegisterSecondActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.RegisterThirdActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.AboutActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.BigHeadActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.CheckUpdateActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.CustomSearchActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.DeveloperActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.DefaultHeadChooseActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditEmailActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditAcademyActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditMyInformationActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditHeadIconActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditNickNameActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditPasswordActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditSignatureActivity" >
+        </activity>
+         <activity android:name="com.eethan.ineedu.secondaryactivity.FlowerFansActivity" >"
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditTelephoneActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.EditUniversityActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.FeedBackActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.ForgetPsdActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.FunctionIntroductionActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.RemindActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.FindPasswordActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.SearchActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.GuideViewActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PlaysActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.secondaryactivity.BigPhotoActivity">
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.PlaysReleaseActivity" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service
+            android:name="com.eethan.ineedu.service.LocateService"
+            android:enabled="true" />
+        <service
+            android:name="com.eethan.ineedu.service.IMChatService"
+            android:enabled="true" />
+        <service
+            android:name="com.eethan.ineedu.service.NoticeService"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent添加你的App Id" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.renn.rennsdk.oauth.OAuthActivity"
+            android:configChanges="orientation|navigation|keyboardHidden" />
+        <activity
+            android:name="com.umeng.socialize.view.CommentActivity"
+            android:configChanges="orientation|keyboard"
+            android:theme="@style/Theme.UMDefault" />
+        <activity
+            android:name="com.umeng.socialize.view.CommentDetail"
+            android:configChanges="orientation|keyboard"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDefault" />
+        <activity
+            android:name="com.umeng.socialize.view.CommentDetailNoMap"
+            android:configChanges="orientation|keyboard"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDefault" />
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.PhotoNewsActivity"
+            android:label="@string/title_activity_photo_news" >
+        </activity>
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.MainActivity1"
+            android:label="@string/title_activity_main_activity1" >
+        </activity>
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.TakeOnePhotoActivity"
+            android:label="@string/title_activity_take_one_photo" >
+        </activity>
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.PhotoNewsDetailActivity"
+            android:label="@string/title_activity_photo_news_detail" >
+        </activity>
+        <activity
+            android:name="com.eethan.ineedu.primaryactivity.BigPhotoActivity"
+            android:label="@string/title_activity_big_photo" >
+        </activity>
+        
+        <activity android:name="com.eethan.ineedu.primaryactivity.GirlsWishesActivity" >
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.WishDetailsActivity" >
+        </activity>
+          <activity android:name="com.eethan.ineedu.secondaryactivity.BgImageSelectActivity">"
+        </activity>
+        <activity android:name="com.eethan.ineedu.primaryactivity.WishReleaseActivity" >
+        </activity>
+        
+    </application>
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+</manifest>

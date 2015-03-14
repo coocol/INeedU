@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+       android:id="@+id/nearby_page_listview"
+       android:layout_width="match_parent"
+       android:divider="@null"
+       android:listSelector="@drawable/click_blue"
+       android:layout_height="match_parent"/>
+ 
+                 
+</RelativeLayout> 
+     
+

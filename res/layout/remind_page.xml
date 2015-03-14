@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue">
+
+   
+	<RelativeLayout 
+	    android:id="@+id/rem_rela_title"
+	    android:layout_height="44dp"
+	    android:layout_width="match_parent"
+	    >
+
+
+        
+            <ImageButton
+			    android:id="@+id/remind_imgbt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="提醒"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>            
+       </RelativeLayout>
+
+
+    
+   
+       <RelativeLayout 
+           android:id="@+id/rem_rela_shake"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:layout_below="@+id/rem_rela_title"
+           android:layout_marginLeft="12dp"
+           android:layout_marginRight="12dp"
+           android:layout_marginTop="48dp"
+           android:padding="6dp"
+           android:background="@drawable/five_corner_ten_black"
+           >
+           <TextView android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:text="震动"
+               android:textColor="@color/eighty_black"
+               android:layout_centerVertical="true"
+               android:textSize="18sp"/>
+           <ImageButton android:id="@+id/remind_page_shake_button"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:background="@drawable/notice_close"/>
+           
+          
+       </RelativeLayout>
+       
+       <RelativeLayout 
+           
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:layout_below="@+id/rem_rela_shake"
+           android:layout_marginLeft="12dp"
+           android:layout_marginRight="12dp"
+           android:layout_marginTop="48dp"
+           android:padding="6dp"
+           android:background="@drawable/five_corner_ten_black"
+           >
+           <TextView android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:text="声音"
+               android:layout_centerVertical="true"
+               android:textColor="@color/eighty_black"
+               android:textSize="18sp"/>
+           <ImageButton android:id="@+id/remind_page_sound_button"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:background="@drawable/notice_close"/>
+        
+       </RelativeLayout>
+
+
+           
+   
+</RelativeLayout>

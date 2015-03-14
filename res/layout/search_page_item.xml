@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    >
+    
+
+		
+     <RelativeLayout android:layout_width="match_parent"
+					 android:layout_height="wrap_content"
+					 android:layout_marginLeft="12dp"
+					 android:layout_marginRight="12dp"
+					 android:layout_marginTop="6dp"
+					 android:layout_marginBottom="6dp"
+					 android:padding="6dp"
+					 android:background="@drawable/five_corner_ten_black"
+         >
+        
+
+       
+    
+<ImageButton    android:id="@+id/nearby_page_headpic_button"
+        			
+           		    android:layout_height="50dp"
+       				android:layout_width="50dp"
+       				android:scaleType="fitXY"
+       				android:background="@drawable/logo"/>
+
+         
+
+       	    
+ <TextView   android:id="@+id/nearby_page_name"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="64dp"
+						android:layout_marginTop="6dp"
+						android:textSize="16sp"
+						android:textColor="@color/white"
+						/>
+
+       	    <TextView
+       	        android:id="@+id/search_page_detail"
+       	        android:layout_width="wrap_content"
+       	        android:layout_height="wrap_content"
+       	        android:layout_marginBottom="3dp"
+       	        android:layout_marginLeft="64dp"
+       	        android:layout_alignParentBottom="true"
+       	        android:textColor="@color/white"
+       	        android:textSize="12sp" />
+
+       	</RelativeLayout>
+       
+		</LinearLayout>

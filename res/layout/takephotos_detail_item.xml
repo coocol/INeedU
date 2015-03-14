@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null" />
+    <TextView
+        android:id="@+id/tv_floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageButton1"
+        android:layout_alignRight="@id/imageButton1"
+        android:layout_marginTop="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/sixty_black" />
+    <RelativeLayout 
+        android:id="@+id/re_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:layout_marginLeft="6dp"
+        android:paddingLeft="12dp"
+        android:layout_marginTop="3dp"
+        >
+        <ImageView 
+            android:id="@+id/iv_sex"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_sex"
+        android:layout_marginLeft="6dp"
+        android:textSize="15sp"
+        android:textColor="@color/blue" />
+        
+        <TextView
+        android:id="@+id/tpd_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/sixty_black" />
+        
+    </RelativeLayout>
+
+    
+
+    
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:layout_alignLeft="@id/re_info"
+        android:layout_below="@+id/re_info"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="6dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="6dp"
+        android:textSize="15sp"
+        android:textColor="@color/eighty_black"
+        android:background="@drawable/chat_worldbubble_left_60"
+		android:autoLink="web|email|map" />
+    
+</RelativeLayout>

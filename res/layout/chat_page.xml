@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+  
+    
+<LinearLayout android:layout_height="44dp"
+       			  android:layout_width="match_parent"
+       			  android:background="@color/blue"
+       			  >
+     <RelativeLayout android:layout_height="match_parent"
+       			  android:layout_width="match_parent"
+       			  >		  
+        <TextView android:id="@+id/chat_page_username_text"
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:layout_centerInParent="true"
+            	  android:textColor="@color/white"
+            	  android:textSize="18sp"/>
+
+<ImageButton
+		    android:id="@+id/chat_page_back_button"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+
+
+        </RelativeLayout>
+       </LinearLayout>
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_weight="1">
+     
+
+      
+
+      <com.eethan.ineedu.util.PullDownView
+	        android:id="@+id/Activity_Talk_Pull_Down_View"
+       		android:clickable="true"
+            android:focusable="true"
+       		android:focusableInTouchMode="true"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+        	 >
+	    </com.eethan.ineedu.util.PullDownView>
+
+      
+     
+      
+      
+        
+
+      
+
+     </RelativeLayout>
+ 
+         
+
+
+
+<LinearLayout android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:background="@color/blue"
+      android:orientation="vertical">
+      <RelativeLayout 
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="12dp"
+          android:layout_marginRight="12dp"
+          android:layout_marginTop="6dp"
+          android:layout_marginBottom="6dp">
+  
+          <ImageButton 
+              android:id="@+id/chat_page_emoticon_button"
+              android:layout_height="30dp"
+              android:layout_width="30dp"
+              android:layout_centerVertical="true"
+              android:background="@drawable/chat_page_emoticon_button_press"/>
+          
+          <EditText
+              android:id="@+id/chat_page_msg_edit_text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="32dp"
+              android:layout_marginRight="32dp"
+              android:layout_centerVertical="true"
+              android:background="@null"
+              android:maxLength="100"
+              android:textColor="#ffffff"
+              android:textSize="18sp" />
+          
+          <ImageButton
+              android:id="@+id/chat_page_send_button" 
+              android:layout_height="30dp"
+              android:layout_width="30dp"
+              android:layout_centerVertical="true"
+              android:layout_alignParentRight="true"
+              android:background="@drawable/chat_page_send_button_press"/>
+          
+         
+           
+      </RelativeLayout>
+      
+      
+  </LinearLayout>
+  
+<HorizontalScrollView
+	    android:id="@+id/hsview"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:visibility="gone"
+	    android:scrollbars="horizontal" >
+	<LinearLayout android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal" >
+	<GridView
+	    android:id="@+id/facegrid"
+	    android:layout_width="wrap_content"
+	    android:layout_gravity="center"
+	    android:layout_height="match_parent"
+	    android:scrollbars="horizontal"
+	    android:background="@color/white"
+	    android:listSelector="#00000000" >
+	    
+	</GridView>
+	</LinearLayout>
+	</HorizontalScrollView>
+
+
+</LinearLayout>

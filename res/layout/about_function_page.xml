@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+     android:background="@color/blue">
+
+<LinearLayout android:layout_height="44dp"
+       			  android:layout_width="match_parent"
+       			 
+       			  >
+     <RelativeLayout android:layout_height="match_parent"
+       			  android:layout_width="match_parent">		  
+        <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="功能介绍"
+            	  android:layout_centerHorizontal="true"
+				  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>
+
+        
+            <ImageButton
+		    android:id="@+id/fucntion_imgbt_back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+        </RelativeLayout>
+       </LinearLayout>
+
+ <RelativeLayout android:layout_height="match_parent"
+     android:layout_width="match_parent">          
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+         >
+            <LinearLayout 
+                android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="vertical"
+        		android:gravity="center_horizontal">
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_guide1"
+                android:adjustViewBounds="true"
+                />
+             <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_guide2"
+                android:adjustViewBounds="true"
+                />
+              <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_guide3"
+                android:adjustViewBounds="true"
+                />
+               <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_guide4"
+                android:adjustViewBounds="true"
+                />
+            
+          </LinearLayout>
+      
+    </ScrollView>
+
+    </RelativeLayout> 
+</LinearLayout>

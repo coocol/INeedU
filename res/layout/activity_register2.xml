@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="12dp">
+
+            <ImageButton
+                android:id="@+id/register2_bt_head"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="81dp"
+                android:background="@drawable/ten_black_circle_selector"/>
+
+            <RelativeLayout
+                android:id="@+id/register2_rl_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register2_bt_head"
+                android:layout_marginTop="54dp" >
+                <RadioGroup
+                    android:id="@+id/register2__rg_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginRight="42dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+               
+
+                        <RadioButton
+                            android:id="@+id/register2_rb_girl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="女"
+                            android:textSize="16sp"
+                            android:textColor="#ffffff"
+                            android:drawablePadding="3dp"
+                            android:drawableLeft="@drawable/register_page2_radiobutton_girl"
+                            android:button="@null" />
+
+                        <RadioButton
+                            android:id="@+id/register2_rb_boy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:text="男"
+                            android:textSize="16sp"
+                            android:textColor="#ffffff"
+                            android:drawablePadding="3dp"
+                            android:drawableLeft="@drawable/register_page2_radiobutton_boy"
+                            android:button="@null" />
+					</RadioGroup>
+                
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/register2_et_realname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/register2_rl_sex"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/common_round_input"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="真实姓名"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:textColor="@color/eighty_black"
+                android:textColorHint="@color/twenty_black"
+                android:textSize="16sp"  
+    			android:singleLine="true" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/register2_et_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/register2_et_realname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/common_round_input"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="昵称"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:textColor="@color/eighty_black"
+                android:textColorHint="@color/twenty_black"
+                android:textSize="16sp"  
+    android:singleLine="true" >
+            </EditText>
+
+            <Button
+                android:id="@+id/register2_bt_next"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/register2_et_nickname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/common_button_selector"
+                android:text="下一步"
+                android:textColor="@color/eighty_black"
+                android:textSize="16sp" />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register2_bt_next"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:textColor="@color/sixty_black"
+                android:text="*性别和真实姓名不能修改*"/>
+
+          
+            <ImageButton
+			    android:id="@+id/register2_bt_back"
+			    android:layout_width="44dp"
+			    android:layout_height="44dp"
+			    android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+			    android:layout_centerVertical="true"
+			    android:background="@drawable/button_click_background_change"
+			    android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/default_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register2_bt_head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:text="请上传真人头像"
+                android:textSize="10sp"
+                android:textColor="@color/sixty_black" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+package com.eethan.ineedu.model;
+
+import java.util.ArrayList;
+
+import com.eethan.ineedu.databasebeans.PlaysComment;
+import com.eethan.ineedu.databasebeans.UserInfo;
+
+public class PlayCommentModel {
+	
+	public UserInfo getCommUserInfo() {
+		return commUserInfo;
+	}
+	public void setCommUserInfo(UserInfo commUserInfo) {
+		this.commUserInfo = commUserInfo;
+	}
+	public PlaysComment getPlaysComment() {
+		return playsComment;
+	}
+	public void setPlaysComment(PlaysComment playsComment) {
+		this.playsComment = playsComment;
+	}
+	private UserInfo commUserInfo;
+	private PlaysComment playsComment;
+
+}

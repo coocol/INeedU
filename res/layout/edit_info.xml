@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/five_black">
+        <LinearLayout android:layout_height="44dp"
+       			  android:layout_width="match_parent"
+       			  android:background="@color/blue"
+       			  >
+     <RelativeLayout android:layout_height="match_parent"
+       			  android:layout_width="match_parent"
+       			 >		  
+        <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="编辑资料"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="@color/white"
+            	  android:textSize="18sp"/>
+        
+         <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColor="#ffffff"
+            android:text="完成"
+            android:clickable="true"
+            android:background="@drawable/button_click_background_change"
+             />
+
+<ImageButton
+		    android:id="@+id/register_page_back_button"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+        </RelativeLayout>
+       </LinearLayout>
+ 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" 
+            android:paddingBottom="12dp">
+        
+        <LinearLayout android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="6dp" 
+            android:background="@color/white">
+            
+            <GridView  
+				  android:id="@+id/gv_add_photo"  
+				  android:layout_width="match_parent"  
+				  android:layout_height="wrap_content"  
+				  android:columnWidth="70dp"  
+				  android:numColumns="auto_fit"  
+				  android:horizontalSpacing="6dp"  
+				  android:verticalSpacing="6dp"  
+				  android:stretchMode="columnWidth"  
+				  android:gravity="center"
+				  android:scrollbars="none">  
+		  </GridView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_click_black"
+            android:padding="6dp" >
+           
+           <ImageButton
+               android:id="@+id/home_page_user_headpic_button"
+               android:layout_height="48dp"
+               android:layout_marginLeft="12dp"
+               android:layout_width="48dp"
+               android:layout_centerVertical="true"
+               android:background="@drawable/logo"
+               />    
+             <TextView android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="100dp"
+                 android:textSize="16sp"
+                 android:textColor="@color/eighty_black"/>
+         </RelativeLayout>
+ 
+
+     <RelativeLayout
+         android:id="@+id/re_layout_nick"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+         android:layout_marginTop="12dp"
+         android:padding="12dp"
+         android:background="@drawable/white_click_black">
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="昵称"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_nickname"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>
+          
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/re_layout_psd"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="12dp"
+         android:background="@drawable/white_click_black" >
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="密码"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_password"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+			 android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:password="true"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>  
+     </RelativeLayout>
+ 
+ 
+     <RelativeLayout android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:padding="12dp"
+         android:background="@drawable/white_click_black">
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="电话"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_tele"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>
+          
+     </RelativeLayout>
+  
+
+     
+     <RelativeLayout android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:padding="12dp"
+         android:background="@drawable/white_click_black">
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="邮箱"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_email"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>
+          
+     </RelativeLayout>
+    
+     <RelativeLayout
+         android:id="@+id/re_layout_sig"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="12dp"
+         android:background="@drawable/white_click_black"
+         android:padding="12dp" >
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="个性签名"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_signature"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>
+     </RelativeLayout>
+ 
+     <RelativeLayout
+         android:id="@+id/re_layout_uni"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="12dp"
+         android:background="@drawable/white_click_black"
+         android:padding="12dp" >
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="大学"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_school"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>
+         
+     </RelativeLayout>
+ 
+     <RelativeLayout
+         android:id="@+id/re_layout_gra"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@drawable/white_click_black"
+         android:padding="12dp" >
+         
+         <TextView android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_centerVertical="true"
+             android:text="院系、年级"
+             android:textSize="16sp"
+             android:textColor="@color/sixty_black"/>
+         
+         <TextView android:id="@+id/edit_major"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="100dp"
+             android:textColor="@color/eighty_black"
+             android:textSize="16sp"/>
+         
+     </RelativeLayout>
+ 
+
+
+            
+        </LinearLayout>
+        </ScrollView>
+</LinearLayout>

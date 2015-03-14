@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+
+<LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+       	    
+            <ImageButton
+		    android:id="@+id/back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="我想玩"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="@color/white"
+            	  android:textSize="18sp"/>
+
+        <ImageButton
+		    android:id="@+id/photonews_imgbt_take_photo"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/play_nocircle" />
+            
+        </RelativeLayout>
+    </LinearLayout>
+    
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent">
+ 
+    <ImageView 
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="94dp"
+          android:background="@color/thirty_black" />
+ 
+      <com.handmark.pulltorefresh.library.PullToRefreshListView
+       android:id="@+id/lv_plays"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:divider="@null"
+       android:listSelector="@drawable/click_blue"
+	   />
+      
+      
+</RelativeLayout>
+  
+</LinearLayout>

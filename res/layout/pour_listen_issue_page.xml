@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/five_black"
+    android:orientation="vertical" >
+    
+    
+<LinearLayout android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue">
+        <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+            
+    
+     <ImageButton
+		    android:id="@+id/pour_listen_issue_page_back_button"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+            
+            <TextView 
+            	  android:layout_height="wrap_content"
+            	  android:layout_width="wrap_content"
+            	  android:text="我想说"
+            	  android:layout_centerHorizontal="true"
+            	  android:layout_centerVertical="true"
+            	  android:textColor="#ffffff"
+            	  android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/pour_listen_issue_page_tv_finish"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColor="#ffffff"
+            android:text="完成"
+            android:clickable="true"
+            android:background="@drawable/button_click_background_change"
+             />
+            
+        </RelativeLayout>
+    </LinearLayout>    
+    
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true" >
+
+        <ImageView android:id="@+id/pour_listen_issue_page_background"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"/>
+        
+        <EditText
+            android:id="@+id/pour_listen_issue_page_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="46dp"
+            android:layout_marginRight="46dp"
+            android:background="@null"
+            android:hint="我想说..."
+            android:maxLength="200"
+            android:textColor="#ffffff"
+            android:textColorHint="#9fffffff"
+            android:textSize="18dp" >
+           
+            </EditText>
+    
+    </RelativeLayout>
+</LinearLayout>
+
+</LinearLayout>
+
+   <!--啦啦啦、这是标记啦  -->

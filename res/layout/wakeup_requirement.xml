@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+  
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="44dp"
+         android:background="@color/blue" >
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:text="起床要求"
+             android:textColor="@color/white"
+             android:textSize="18sp" />
+
+		<ImageButton
+		    android:id="@+id/imgbt_back"
+		    android:layout_width="44dp"
+		    android:layout_height="44dp"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/button_click_background_change"
+		    android:src="@drawable/back" />
+		<Button
+		    android:id="@+id/bt_finish"
+		    android:layout_width="44dp"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:text="完成"
+		    android:textSize="17sp"
+		    android:textColor="@color/white"
+		    android:background="@drawable/button_click_background_change"/>
+		
+
+     </RelativeLayout>
+     
+     <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp" >
+
+    <TextView
+        android:id="@+id/tv_requirement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="我的要求:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_requirement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_requirement"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="12dp"
+        android:gravity="top"
+        android:textSize="16sp"
+        android:textColor="@color/eighty_black"
+        android:hint="请输入要求(几点叫我起床、周末是否需要叫等)"
+        android:textColorHint="@color/twenty_black"
+        android:maxLength="100"
+        android:background="@drawable/five_corner_ten_black">
+
+        <requestFocus />
+    </EditText>
+</RelativeLayout>
+
+     <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp" >
+
+    <TextView
+        android:id="@+id/tv_scope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:text="匹配范围:"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <RadioGroup
+                android:id="@+id/rg_scope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_scope"
+                android:layout_marginTop="6dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_near"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/round_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="附近"
+                    android:textColor="@color/sixty_black"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/round_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="本校"
+                    android:textColor="@color/sixty_black"
+                    android:textSize="15sp" 
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rb_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+					android:layout_weight="1"
+					android:layout_marginRight="12dp"
+                    android:background="@drawable/round_button_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="全国"
+                    android:textColor="@color/sixty_black"
+                    android:textSize="15sp" />
+
+               
+            </RadioGroup>
+    
+</RelativeLayout>
+</LinearLayout>

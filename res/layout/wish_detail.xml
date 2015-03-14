@@ -1,0 +1,245 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/five_black"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/blue" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/imgbt_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_click_background_change"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="详细星愿"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_pickoff"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_click_background_change"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="想摘的人"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/ten_black"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_weight="1"
+                        android:background="@color/eighty_white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/ten_black"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/imgbt_pickoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_background_change"
+                            android:padding="6dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/pickoff" />
+
+                        <ImageButton
+                            android:id="@+id/imgbt_flower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_background_change"
+                            android:padding="6dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/flower" />
+
+                        <ImageButton
+                            android:id="@+id/imgbt_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_click_background_change"
+                            android:padding="6dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/comment_big" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/sv_wish"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/bottom"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/rl_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/twenty_black"
+                            android:paddingBottom="6dp" >
+
+                            <ImageView
+                                android:id="@+id/iv_head"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="6dp"
+                                android:src="@drawable/logo" />
+
+                            <RelativeLayout
+                                android:id="@+id/relativeLayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/iv_head"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_toRightOf="@+id/iv_head" >
+
+                                <ImageView
+                                    android:id="@+id/iv_girl"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/sex_girl_press" />
+
+                                <TextView
+                                    android:id="@+id/tv_nickname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_toRightOf="@+id/iv_girl"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/iv_head"
+                                android:layout_alignLeft="@+id/relativeLayout1"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_distance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/tv_time"
+                                android:layout_marginLeft="12dp"
+                                android:layout_toRightOf="@id/tv_time"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/tv_time"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="12dp"
+                                android:background="@drawable/five_corner_blue"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:autoLink="web|email|map"
+                                android:gravity="center"
+                                android:minHeight="168dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp" >
+
+                            <com.eethan.ineedu.mycontrol.ScrollListView
+                                android:id="@+id/scllv_wish_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:divider="@null"
+                                android:listSelector="@drawable/click_blue" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
